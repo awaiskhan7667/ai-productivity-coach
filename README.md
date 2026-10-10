@@ -1,4 +1,12 @@
-# AI Productivity Coach
+---
+title: AI Productivity Coach
+emoji: 🧠
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+---
 
 An AI-powered productivity assistant built with FastAPI, OpenAI, LangGraph, FAISS, and SQLite.
 
