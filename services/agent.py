@@ -1,6 +1,6 @@
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 
 from config import settings
 from services.tools import calculator
@@ -14,10 +14,11 @@ def calculate(a: float, b: float, operation: str):
 
 llm = ChatOpenAI(
     model="gpt-5-mini",
-    api_key=settings.openai_api_key
+    api_key=settings.openai_api_key,
+    timeout = 30
 )
 
-agent = create_react_agent(
+agent = create_agent(
     llm,
     tools=[calculate]
 )

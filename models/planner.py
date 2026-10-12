@@ -5,6 +5,9 @@ class PlannerRequest(BaseModel):
     goal: str = Field(min_length=3, max_length=300)
     available_hours: float = Field(gt=0, le=24)
 
+# class AgentRequest(BaseModel):
+#     question: str = Field(min_length=1)
+
 
 class Task(BaseModel):
     task: str
